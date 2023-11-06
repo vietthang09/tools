@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Header() {
   const [openNav, setOpenNav] = React.useState(false);
 
   return (
-    <nav class="sticky top-0 z-10 bg-orange-400 border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+    <nav class="sticky top-0 z-10 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link to={"/"} className="flex items-center">
-          <img src="" className="h-8 w-8 mr-3" alt="Flowbite Logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-            TikTak
+        <Link to={"/"}>
+          <span className="self-center text-2xl font-semibold whitespace-nowrap text-blue-900">
+            Taivideo
           </span>
         </Link>
         <button
@@ -36,13 +35,13 @@ export default function Header() {
           </svg>
         </button>
         <div className={`${openNav ? "" : "hidden"} w-full md:block md:w-auto`}>
-          <ul className="flex flex-col font-bold text-lg text-white p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+          <ul className="flex flex-col font-bold text-lg text-blue-900 p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
             <li>
               <Link
                 onClick={() => {
                   setOpenNav(false);
                 }}
-                className="block py-2 text-white pl-3 pr-4 md:p-0"
+                className="block py-2 pl-3 pr-4 md:p-0"
                 to={"/"}
               >
                 Tải video TikTok
